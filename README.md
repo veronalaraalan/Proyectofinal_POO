@@ -2,8 +2,8 @@
 
 # Diseño e Implementación Académica de un Sistema Automatizado de Inscripción Universitaria Enfocado al Cálculo del Número de Inscripción
 
-![Lenguaje: Java](https://img.shields.io/badge/language-Java-blue)
-![Estado](https://img.shields.io/badge/status-ongoing-yellow)
+![Lenguaje: Java](https://img.shields.io/badge/Lenguaje-Java-blue)
+![Estado](https://img.shields.io/badge/Estado-Finalizado-green)
 
 Descripción
 -----------
