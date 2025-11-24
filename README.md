@@ -2,22 +2,22 @@
 
 # Diseño e Implementación Académica de un Sistema Automatizado de Inscripción Universitaria Enfocado al Cálculo del Número de Inscripción
 
-![Lenguaje: Java](https://img.shields.io/badge/Lenguaje-Java-blue)
-![Estado](https://img.shields.io/badge/Estado-Finalizado-green)
+![Lenguaje: Java](https://img.shields.io/badge/language-Java-blue)
+![Estado](https://img.shields.io/badge/status-ongoing-yellow)
 
 Descripción
 -----------
-Proyecto desarrollado en Java para automatizar el proceso de inscripción universitaria con énfasis en el cálculo del número de inscripción asignado a cada estudiante. Ofrece operaciones CRUD sobre alumnos, impresión aleatoria de alumnos, catálogo de asignaturas, reporte TOP 10 por indicador y exportación a CSV.
+Proyecto en Java para automatizar el proceso de inscripción universitaria con énfasis en el cálculo del número de inscripción asignado a cada estudiante. Proporciona operaciones CRUD de alumnos, catálogo de asignaturas, impresión aleatoria de alumnos, reporte TOP 10 por indicador y exportación a CSV.
 
-Características principales
---------------------------
-- Gestión CRUD de alumnos (crear, buscar por número de cuenta, editar, eliminar).
-- Impresión aleatoria de alumnos para pruebas.
+Características
+---------------
+- CRUD de alumnos (crear, buscar por número de cuenta, editar, eliminar).
+- Impresión aleatoria de alumnos.
 - Catálogo de asignaturas.
 - Cálculo y asignación automática del "Número de Inscripción" y un indicador asociado.
-- Reporte TOP 10 alumnos (ranking).
-- Exportación de ranking a CSV (alumnos_ranking.csv).
-- Interfaz de consola (CLI) basada en menú.
+- Reporte TOP 10 (ranking) y exportación a CSV (`alumnos_ranking.csv`).
+- Interfaz de consola (CLI) con menú.
+- Uso del archivo `direcciones.txt` exportado para ciertas funciones del programa.
 
 Requisitos
 ----------
@@ -32,20 +32,26 @@ Instalación
    cd Proyectofinal_POO
    ```
 
+Uso del archivo direcciones.txt
+------------------------------
+- El programa utiliza el archivo `direcciones.txt` para funciones específicas (se exporta desde el proyecto y se lee en tiempo de ejecución).
+- Colocar `direcciones.txt` en la carpeta desde la cual se ejecuta la aplicación (misma carpeta donde se ejecuta `java -jar`) o incluirlo en la carpeta `dist/` antes de distribuir.
+- Al distribuir, incluya `direcciones.txt` dentro del ZIP junto con `dist/` y `dist/lib/` para que las funciones que lo consumen puedan accederlo por la ruta relativa `direcciones.txt`.
+
 Build con NetBeans
 ------------------
-- Abre el proyecto en NetBeans.
-- Ejecuta "Clean and Build" / "Build".
-- El IDE generará la carpeta `dist/` y copiará las dependencias JAR a `dist/lib/`.
+- Abrir el proyecto en NetBeans.
+- Ejecutar "Clean and Build" / "Build".
+- El IDE generará la carpeta `dist/` con el JAR ejecutable y copiará las dependencias JAR a `dist/lib/`.
 - El manifiesto (`MANIFEST.MF`) del JAR incluirá `Main-Class` y `Class-Path`.
 
-Compilar y empaquetar por línea de comandos (ejemplo genérico)
--------------------------------------------------------------
+Compilar y empaquetar por línea de comandos (ejemplo)
+----------------------------------------------------
 1. Compilar:
    ```
    javac -d bin $(find src -name "*.java")
    ```
-2. Crear manifiesto (archivo `manifest.txt`) con la línea:
+2. Crear manifiesto (`manifest.txt`):
    ```
    Main-Class: tu.paquete.ClasePrincipal
    ```
@@ -54,7 +60,7 @@ Compilar y empaquetar por línea de comandos (ejemplo genérico)
    ```
    jar cfm dist/NombreAplicacion.jar manifest.txt -C bin .
    ```
-4. Si hay dependencias externas, inclúyelas en `Class-Path` del manifiesto o distribúyelas en `dist/lib/`.
+4. Incluir `direcciones.txt` en la carpeta desde la que se ejecute el JAR o dentro de `dist/` al distribuir.
 
 Ejecutar la aplicación
 ----------------------
@@ -66,7 +72,7 @@ Sustituya "HU03.jar" por el nombre real del JAR generado.
 
 Exportación a CSV
 -----------------
-- La aplicación exporta el ranking a `alumnos_ranking.csv`.
+- Archivo de salida: `alumnos_ranking.csv`
 - Ejemplo de salida al exportar:
 ```
 Seleccione una opcion: 8
@@ -96,13 +102,13 @@ SISTEMA DE REGISTRO ACADEMICO
 Seleccione una opcion:
 ```
 
-Ejemplo: Exportación CSV
+Exportación CSV (ejemplo):
 ```
 Seleccione una opcion: 8
 Exito: Los datos de los 1000 alumnos han sido exportados a: alumnos_ranking.csv
 ```
 
-Ejemplo: Reporte TOP 10
+Reporte TOP 10 (ejemplo):
 ```
 ==========================================
 TOP 10 ALUMNOS - NUM. INSCRIPCION ASIGNADO
