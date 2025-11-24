@@ -129,19 +129,3 @@ TOP 10 ALUMNOS - NUM. INSCRIPCION ASIGNADO
    Nombre: Esther Emilia Mendoza Montes
 ==========================================
 ```
-
-Notas sobre MANIFEST.MF y dependencias
--------------------------------------
-- El IDE copia los JAR del classpath a `dist/lib/` y añade esos JAR al `Class-Path` del manifiesto del JAR principal.
-- Si dos JAR en el classpath comparten el mismo nombre, solo el primero se copiará a `dist/lib/`.
-- Solo se copian archivos JAR; otros recursos no se copian automáticamente.
-- Si una dependencia tiene un `Class-Path` en su manifiesto, los recursos referenciados deben estar disponibles en tiempo de ejecución.
-
-Estructura del proyecto
------------------------
-- src/                Código fuente (.java)
-- bin/                Archivos compilados (.class) — si se usa compilación manual
-- lib/                Dependencias (JAR) durante desarrollo
-- dist/               JAR final y carpeta lib con dependencias (generado por IDE)
-- README.md
-- LICENSE
